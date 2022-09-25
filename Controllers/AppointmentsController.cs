@@ -9,9 +9,9 @@ namespace backendCode.Controllers
     [Route("api/[Controller]")]
     public class AppointmentsController : Controller
     {
-        private readonly AppointementDbContext _appointementDbContext;
+        private readonly AppointmentDbContext _appointementDbContext;
 
-        public AppointmentsController(AppointementDbContext appointementDbContext)
+        public AppointmentsController(AppointmentDbContext appointementDbContext)
         {
             _appointementDbContext = appointementDbContext;
         }

@@ -29,10 +29,7 @@ namespace backendCode.Migrations.SlotDb
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SlotId"), 1L, 1);
 
-                    b.Property<string>("SlotEndTime")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SlotStartTime")
+                    b.Property<string>("SlotName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("SlotId");

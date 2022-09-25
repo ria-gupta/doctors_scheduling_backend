@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<AppointementDbContext>(options =>
+builder.Services.AddDbContext<AppointmentDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("BackendConnectionString")));
 builder.Services.AddDbContext<SlotDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("BackendConnectionString")));

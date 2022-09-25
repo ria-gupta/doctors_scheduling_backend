@@ -3,7 +3,6 @@
     public class Slot
     {
         public int SlotId { get; set; }    
-        public string SlotStartTime { get; set; }
-        public string SlotEndTime { get; set; }
+        public string SlotName { get; set; }
     }
 }

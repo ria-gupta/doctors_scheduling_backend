@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace backendCode.Data
 {
-    public class AppointementDbContext: DbContext
+    public class AppointmentDbContext: DbContext
     {
-        public AppointementDbContext(DbContextOptions<AppointementDbContext> options): base(options)
+        public AppointmentDbContext(DbContextOptions<AppointmentDbContext> options): base(options)
         {
 
         }
