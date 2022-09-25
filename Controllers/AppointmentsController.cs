@@ -34,5 +34,22 @@ namespace backendCode.Controllers
 
             return Ok(appointmentRequest);  
         }
+
+        [HttpDelete]
+        [Route("{id:Guid}")]
+        public async Task<IActionResult> DeleteAppointment([FromRoute] Guid id)
+        {
+            var appointment = await _appointementDbContext.Appointments.FindAsync(id);
+
+            if(appointment == null)
+            {
+                return NotFound();  
+            }
+            _appointementDbContext.Appointments.Remove(appointment);
+            await _appointementDbContext.SaveChangesAsync();
+
+            return Ok(appointment);
+
+        }
     }
 }
